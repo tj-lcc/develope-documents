@@ -1,0 +1,10 @@
+1.问题描述：
+	<a href="link?param=中文" class="link"></a>在IE上会产生中文乱码，其他浏览器正常；
+2.解决方案：
+通过js的encodeURI方法，代码如下：
+$('a.link').click(function(e) {
+	e.preventDefault();
+
+	var href = $(this).attr('href');
+	window.open(encodeURI(href));
+});

@@ -1,0 +1,9 @@
+show variables like '%timeout%';
+
+show variables like '%packet%';
+
+set global max_allowed_packet=99328000;
+
+set global wait_timeout=2880000;
+
+set global interactive_timeout=2880000;
