@@ -1,0 +1,10 @@
+JDK环境变量配置
+一、 前提条件
+从http://www.oracle.com下载好适当版本的jdk并按照步骤安装。
+二、 Win7系统中JDK环境变量配置
+1. 右键计算机，选择属性
+2. 高级系统设置--->环境变量
+3. 创建JAVA_HOME系统变量，值为JDK所在根目录：
+4. 编辑Path系统变量，在后面添加 “;%JAVA_HOME%\bin; %JAVA_HOME%\jre\bin”，若原先的值后面有分好，则引号中的分号则无须再添加
+5. 创建classpath系统变量，值为：”.;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar”
+6. 配置完成，WIN+R进入cmd，输入java –version然后javac -version，输出如下信息则配置成功：
